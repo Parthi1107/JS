@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="div" style="font-size: 3rem;">This is an example for HTML styles</div>
+  <br />
+  <select id="colorDropdown">
+    <option value="" disabled selected>Choose a color</option>
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="yellow">Yellow</option>
+    <option value="orange">Orange</option>
+    <option value="purple">Purple</option>
+  </select>
+
+  <script>
+    var div = document.getElementsByClassName('div')[0];
+    var dropdown = document.getElementById('colorDropdown');
+
+    dropdown.addEventListener('change', () => {
+      var selectedColor = dropdown.value;
+      div.style.color = selectedColor;
+    });
+  </script>
+</body>
+</html>
